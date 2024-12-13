@@ -1,0 +1,46 @@
+header{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content:flex-start;
+    /* margin: 0 2em; */
+    padding: 1.5em 5em 0.4em 3.8em;
+    font-size: 0.9em;
+}
+.head-icon{
+    height: 2.45em;
+    width: auto;
+}
+.sub-head{
+    /* margin-left: 12em; */
+    margin-top: 1.4em;
+}
+.sub-head li a{
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+    text-decoration: none;
+    color: black;
+}
+.nav-icon{
+    height: 1.3em;
+    width: auto;
+}
+.top img{
+    width: 98.9%;
+    padding: 0.4em;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+}
+nav{
+    height: 4.4em;
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+nav ul li {
+    margin: 0 15px;
+    font-weight: 600;
+}
