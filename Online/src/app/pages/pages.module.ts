@@ -22,8 +22,13 @@ import { AboutComponent } from './about/about.component';
     CommonModule
   ],
   exports:[
+    DashboardComponent,
+    CartComponent,
+    ContactComponent,
+    AboutComponent,
     LoginComponent,
     RegisterComponent
+
   ]
 })
 export class PagesModule { }
