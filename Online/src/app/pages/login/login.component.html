@@ -1,1 +1,36 @@
-<p>login works!</p>
+<div class="m-5">
+    <div class="card p-4">
+        <div id="loginInfo ">
+            <div class="row g-0">
+                <div class="col-md-6 g-5">
+                    <h2>Welcome to Furlenco</h2>
+                    <div class="form-floating mb-3 ">
+                        <input type="username" class="form-control" id="floatingInputUsername"  [(ngModel)] = "uname" placeholder="" >
+                        <label for="floatingInput">Username</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingInputPassword" [(ngModel)] = "pwd" placeholder="">
+                        <label for="floatingInput">Password</label>
+                    </div>
+                    <button class="btn btn-outline-primary w-100" (click) = "validate()">Login</button>
+                    <div *ngIf="valid=='Valid' else a">
+                        <p class="text-success mt-3">Correct Credentials</p>
+                    </div>
+                    <ng-template #a>
+                        <div *ngIf="valid=='Invalid' else b">
+                            <p class="text-danger mt-3">Invalid Credentials</p>
+                        </div>
+                    </ng-template>
+                    <ng-template #b></ng-template>
+                </div>
+
+                <div class="col-md-6">
+
+                    <div >
+                        <img [src]="path" [title]="title" width="550px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

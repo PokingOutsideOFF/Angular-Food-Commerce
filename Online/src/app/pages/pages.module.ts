@@ -6,6 +6,7 @@ import { CartComponent } from './cart/cart.component';
 import { RegisterComponent } from './register/register.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -16,10 +17,11 @@ import { AboutComponent } from './about/about.component';
     CartComponent,
     RegisterComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports:[
     LoginComponent,
