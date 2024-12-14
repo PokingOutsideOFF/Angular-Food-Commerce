@@ -24,8 +24,13 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   exports:[
+    DashboardComponent,
+    CartComponent,
+    ContactComponent,
+    AboutComponent,
     LoginComponent,
     RegisterComponent
+
   ]
 })
 export class PagesModule { }

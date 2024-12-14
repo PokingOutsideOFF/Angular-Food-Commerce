@@ -1,0 +1,79 @@
+
+.hero-buy-btn {
+  color: white;
+  background-color: #b98e2f;
+  font-size: small;
+  width: fit-content;
+  transition: all 0.2s ease-in-out;
+}
+.hero-buy-btn:hover {
+  background-color: white;
+  border: 1px solid #b98e2f;
+  color: #b98e2f;
+}
+.show-more-btn {
+  color: #b98e2f;
+  border-color: #b98e2f;
+  font-size: small;
+}
+.show-more-btn:hover {
+  color: white;
+  background-color: #b98e2f;
+}
+.carousel-img {
+  transform: scale(1.2);
+  object-fit: contain;
+  transition: all 0.2s ease-in-out;
+}
+.carousel-img:hover {
+  transform: scale(1);
+}
+
+.hover-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.product-card:hover .hover-overlay {
+  opacity: 100;
+}
+.share-div,
+.compare-div,
+.like-div,
+.add-to-cart-btn {
+  transition: all 0.2s ease-in-out;
+}
+.add-to-cart-btn:hover {
+  transform: scale(1.1);
+}
+.share-div:hover {
+  transform: scale(1.1);
+  filter: brightness(0) saturate(100%) invert(51%) sepia(77%)
+    saturate(4513%) hue-rotate(184deg) brightness(102%) contrast(108%);
+}
+.compare-div:hover {
+  transform: scale(1.1);
+  filter: brightness(0) saturate(100%) invert(79%) sepia(31%)
+    saturate(6863%) hue-rotate(103deg) brightness(97%) contrast(102%);
+}
+.like-div:hover {
+  transform: scale(1.1);
+  filter: brightness(0) saturate(100%) invert(32%) sepia(96%)
+    saturate(2569%) hue-rotate(343deg) brightness(103%) contrast(91%);
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#testimonial-heart-img {
+  animation: scaleUp 2s ease-in-out infinite;
+}
