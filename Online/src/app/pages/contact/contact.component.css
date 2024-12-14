@@ -3,12 +3,12 @@
 } */
 .bgimage {
     height: 100vh;
-    background: url(./img/Contact_Background.jpg);
+    /* background: url(../img/Contact_Background.jpg); */
     background-size: cover;
     height: 300px;
   }
   .contact-h {
-    background: url(../img/Rectangle.jpg);
+    /* background: url(../img/Rectangle.jpg); */
     background-size: cover;
     height: 300px;
     text-align: center;
