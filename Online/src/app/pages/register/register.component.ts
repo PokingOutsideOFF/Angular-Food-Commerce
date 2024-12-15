@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-
+  path = "../assets/sofa.webp"
+  title = "sofa"
 }

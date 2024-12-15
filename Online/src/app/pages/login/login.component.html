@@ -14,7 +14,7 @@
                     </div>
                     <button class="btn btn-outline-primary w-100" (click) = "validate()">Login</button>
                     <div *ngIf="valid=='Valid' else a">
-                        <p class="text-success mt-3">Correct Credentials</p>
+                        <p class="text-success mt-3">Correct Credentials    </p>
                     </div>
                     <ng-template #a>
                         <div *ngIf="valid=='Invalid' else b">
