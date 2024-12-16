@@ -6,6 +6,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { ShopComponent } from './pages/shop/shop.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' }, // Default route
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'shop' , component:ShopComponent},
   { path: 'register', component: RegisterComponent },
   { path: '**', redirectTo: '/dashboard' } // Wildcard route for a 404 page
 ];
