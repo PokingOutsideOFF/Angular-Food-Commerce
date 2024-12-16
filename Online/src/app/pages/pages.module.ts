@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -18,19 +19,20 @@ import { FormsModule } from '@angular/forms';
     RegisterComponent,
     ContactComponent,
     AboutComponent,
+    ProfileComponent,
   ],
   imports: [
     CommonModule,
     FormsModule
   ],
-  exports:[
+  exports: [
     DashboardComponent,
     CartComponent,
     ContactComponent,
     AboutComponent,
     LoginComponent,
-    RegisterComponent
-
+    RegisterComponent,
+    ProfileComponent
   ]
 })
 export class PagesModule { }
