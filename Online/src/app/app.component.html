@@ -8,4 +8,7 @@
 </ng-container>
 
 <router-outlet></router-outlet>
-<app-footer/>
+
+<ng-container *ngIf="showHeaderFooter">
+    <app-footer/>
+</ng-container>
