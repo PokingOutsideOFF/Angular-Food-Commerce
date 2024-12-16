@@ -31,7 +31,7 @@ export class LoginComponent {
       console.log(this.u)
       if(this.u.password === this.pwd){
         this.valid = "Valid"
-        this.router.navigate(['/dashboard'])
+        this.router.navigate(['/dashboard',{user: this.u.username, tel: this.u.tel, email: this.u.email}]);
       }
       else{
         this.valid= "Invalid"
