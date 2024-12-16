@@ -16,7 +16,7 @@ export class RegisterComponent {
 
   uname:string = "";
   email:string = "";
-  tel:number = 0;
+  tel?:number;
   pwd:string = ""
   confirm_pwd:string = ""
   msg:string =""
@@ -28,13 +28,9 @@ export class RegisterComponent {
 
   validate(){
     // if(this.uname.length == 0 || this.email.length==0||this.tel==0||)
-    this.addUser();
-  }
-
-  addUser(){
     var u1 = new User(this.uname, this.pwd, this.email, this.tel);
-    console.log(u1)
-    this.user.push(u1)
+    this.ls.addUser(u1);
     this.router.navigate(['/login'])
+    console.log(this.ls.users)
   }
 }

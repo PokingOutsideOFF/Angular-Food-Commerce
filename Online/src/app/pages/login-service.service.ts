@@ -5,10 +5,17 @@ import { User } from './user';
 })
 export class LoginServiceService {
 
+
+  currentUser?:User;
+
   users = new Array<User>(
     new User('sh', '1234', 'shrey@gmail.com', 9999999991),
     new User('vp', '1234', 'shrey@gmail.com', 9999999991),
     new User('ss', '1234', 'shrey@gmail.com', 9999999991),    
   )
   constructor() { }
+
+  addUser(u:User){
+    this.users.push(u)
+  }
 }

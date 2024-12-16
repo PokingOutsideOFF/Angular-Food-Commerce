@@ -2,7 +2,11 @@
 <!-- <app-header></app-header> -->
   
 <div class="container position-relative">
-      <p>Welcome, {{username}}</p>
+      <div class="alert alert-success alert-dismissible fade show">
+        Welcome, {{username}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      
       <img src="../assets/img/hero.png" alt="" style="width: 100%" />
       <div
         class="p-5 position-absolute w-50 h-50 z-1 rounded-2 d-flex flex-column"
