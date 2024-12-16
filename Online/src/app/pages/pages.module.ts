@@ -8,8 +8,8 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { FormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
-
-
+import { FooterComponent } from '../components/footer/footer.component';
+import { HeaderComponent } from '../components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +19,8 @@ import { ProfileComponent } from './profile/profile.component';
     RegisterComponent,
     ContactComponent,
     AboutComponent,
+    // FooterComponent,
+    // HeaderComponent
     ProfileComponent,
   ],
   imports: [
@@ -32,6 +34,8 @@ import { ProfileComponent } from './profile/profile.component';
     AboutComponent,
     LoginComponent,
     RegisterComponent,
+    // FooterComponent,
+    // HeaderComponent,
     ProfileComponent
   ]
 })

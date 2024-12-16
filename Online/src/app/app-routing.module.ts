@@ -9,7 +9,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, // Default route
+  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Default route
   { path: 'dashboard', component: DashboardComponent },
   { path: 'cart', component: CartComponent },
   { path: 'contact', component: ContactComponent },
