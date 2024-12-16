@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from '../components/footer/footer.component';
 import { HeaderComponent } from '../components/header/header.component';
+import { ShopComponent } from './shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HeaderComponent } from '../components/header/header.component';
     RegisterComponent,
     ContactComponent,
     AboutComponent,
+    ShopComponent,
     // FooterComponent,
     // HeaderComponent
   ],
