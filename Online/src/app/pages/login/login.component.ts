@@ -23,7 +23,6 @@ export class LoginComponent {
   }
   
   validate(){
-
     console.log(this.user)
     console.log(this.uname)
     if(this.user.find(x=>x.username === this.uname)){
