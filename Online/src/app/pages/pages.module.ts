@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { HeaderComponent } from '../components/header/header.component';
 import { ShopComponent } from './shop/shop.component';
@@ -22,12 +23,13 @@ import { ShopComponent } from './shop/shop.component';
     ShopComponent,
     // FooterComponent,
     // HeaderComponent
+    ProfileComponent,
   ],
   imports: [
     CommonModule,
     FormsModule
   ],
-  exports:[
+  exports: [
     DashboardComponent,
     CartComponent,
     ContactComponent,
@@ -35,8 +37,8 @@ import { ShopComponent } from './shop/shop.component';
     LoginComponent,
     RegisterComponent,
     // FooterComponent,
-    // HeaderComponent
-
+    // HeaderComponent,
+    ProfileComponent
   ]
 })
 export class PagesModule { }

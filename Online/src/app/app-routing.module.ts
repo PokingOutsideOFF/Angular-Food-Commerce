@@ -6,6 +6,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 import { ShopComponent } from './pages/shop/shop.component';
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'shop' , component:ShopComponent},
   { path: 'register', component: RegisterComponent },
-  { path: '**', redirectTo: '/dashboard' } // Wildcard route for a 404 page
+  { path: 'profile',component: ProfileComponent},
+  { path: '**', redirectTo: '/dashboard' }, // Wildcard route for a 404 page
 ];
 
 @NgModule({
