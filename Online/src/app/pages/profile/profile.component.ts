@@ -18,8 +18,8 @@ export class ProfileComponent {
     var tel =localStorage.getItem("tel");
     this.una=`${uname}`;
     this.pwd=`${pass}`;
-    this.una=`${email}`;
-    this.una=`${tel}`;
+    this.ema=`${email}`;
+    this.tel=`${tel}`;
   }
 
 }
