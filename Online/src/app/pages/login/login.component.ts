@@ -16,6 +16,8 @@ export class LoginComponent {
   user: any[] = [];
   uname: string = ""
   pwd: string = ""
+  em: string = ""
+  tel: string = ""
   valid: string = ""
 
   constructor(private _ls: LoginServiceService, private router: Router) {
@@ -28,11 +30,15 @@ export class LoginComponent {
     console.log(this.uname)
     var us: boolean = this.user.find(x => x.username === this.uname && x.password === this.pwd)
     if (us) {
-      this.router.navigate(['/dashboard', { user: this.u.username, tel: this.u.tel, email: this.u.email }]);
-      localStorage.setItem("uname",this.u.uname)
-      localStorage.setItem("pass",this.u.pwd)
-      localStorage.setItem("email",this.u.email)
-      localStorage.setItem("tel",this.u.tel)
+      this.u = this.user.find(x=>x.username === this.uname);
+      this.em=this.u.email;
+      this.tel=this.u.tel;
+      
+      localStorage.setItem("uname",this.uname)
+      // localStorage.setItem("pass",this.pwd)
+      localStorage.setItem("email",this.em)
+      localStorage.setItem("tel",this.tel)
+      this.router.navigate(['/dashboard']);
     }
 
 
