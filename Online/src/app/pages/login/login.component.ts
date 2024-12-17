@@ -11,34 +11,45 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   path = '../assets/sofa.webp'
-  title="sofa";
-  u:any = []
-  user: any[] =[];
-  uname:string = ""
-  pwd:string = ""
-  valid:string = ""
+  title = "sofa";
+  u: any = []
+  user: any[] = [];
+  uname: string = ""
+  pwd: string = ""
+  valid: string = ""
 
-  constructor(private _ls:LoginServiceService, private router:Router){
+  constructor(private _ls: LoginServiceService, private router: Router) {
     this.user = _ls.users;
   }
-  
-  validate(){
+
+  validate() {
+
     console.log(this.user)
     console.log(this.uname)
-    if(this.user.find(x=>x.username === this.uname)){
-      this.u = this.user.find(x=>x.username === this.uname);
-      console.log(this.u)
-      if(this.u.password === this.pwd){
-        this.valid = "Valid"
-        this.router.navigate(['/dashboard',{user: this.u.username, tel: this.u.tel, email: this.u.email}]);
-      }
-      else{
-        this.valid= "Invalid"
-      }
+    var us: boolean = this.user.find(x => x.username === this.uname && x.password === this.pwd)
+    if (us) {
+      this.router.navigate(['/dashboard', { user: this.u.username, tel: this.u.tel, email: this.u.email }]);
+      localStorage.setItem("uname",this.u.uname)
+      localStorage.setItem("pass",this.u.pwd)
+      localStorage.setItem("email",this.u.email)
+      localStorage.setItem("tel",this.u.tel)
     }
 
-    else{
-      this.valid= "Invalid"
+
+    // if(this.user.find(x=>x.username === this.uname)){
+    //   this.u = this.user.find(x=>x.username === this.uname);
+    //   console.log(this.u)
+    //   if(this.u.password === this.pwd){
+    //     this.valid = "Valid"
+    //     this.router.navigate(['/dashboard',{user: this.u.username, tel: this.u.tel, email: this.u.email}]);
+    //   }
+    //   else{
+    //     this.valid= "Invalid"
+    //   }
+    // }
+
+    else {
+      this.valid = "Invalid"
     }
     this.u = []
   }
