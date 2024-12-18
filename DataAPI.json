@@ -45,13 +45,6 @@
   ],
   "cart": [
     {
-      "id": "93a5",
-      "username": "Sudhanshu",
-      "item": "Sofa",
-      "price": 28000,
-      "quantity": 1
-    },
-    {
       "id": "14a2",
       "username": "Sudhanshu",
       "item": "Syltherine",
