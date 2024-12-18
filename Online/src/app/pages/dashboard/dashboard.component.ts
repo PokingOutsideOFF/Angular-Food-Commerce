@@ -1,7 +1,5 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute, UrlHandlingStrategy } from '@angular/router';
-import { CartService } from '../cart.service';
-import { Orders } from '../orders';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 
 
@@ -11,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./dashboard.component.css'],
   standalone: false
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit{
 
   url:string = "http://localhost:3000/cart"
   una:string='';
@@ -21,9 +19,13 @@ export class DashboardComponent {
 
   cart:any[] = []
 
-  constructor(private _http:HttpClient){
+  constructor(private _http:HttpClient, private _ts: Title){
     var uname =localStorage.getItem("uname");
     this.una=`${uname}`;
+  }
+
+  ngOnInit():void{
+    this._ts.setTitle('Furlenco')
   }
 
   addToCart(item:string,price:number){

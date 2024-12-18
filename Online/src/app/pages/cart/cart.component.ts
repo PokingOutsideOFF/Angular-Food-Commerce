@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-cart',
@@ -8,13 +9,13 @@ import { Component } from '@angular/core';
   standalone: false
 
 })
-export class CartComponent {
+export class CartComponent implements OnInit {
   cart:any[] = []
 
   total:number = 0
   url = "http://localhost:3000/cart"
 
-  constructor(private _http:HttpClient){
+  constructor(private _http:HttpClient, private _ts:Title){
     this._http.get<any[]>(this.url)
     .subscribe(resp=>{
       this.cart = resp;
@@ -23,6 +24,11 @@ export class CartComponent {
     }
     );
   }
+
+  ngOnInit(): void {
+    this._ts.setTitle('Cart')
+  }
+  
   calculateTotal(){
     console.log("Here")
     for(let i of this.cart){

@@ -8,8 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { FormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
-import { FooterComponent } from '../components/footer/footer.component';
-import { HeaderComponent } from '../components/header/header.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ShopComponent } from './shop/shop.component';
 
 @NgModule({
@@ -27,7 +26,8 @@ import { ShopComponent } from './shop/shop.component';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     DashboardComponent,
