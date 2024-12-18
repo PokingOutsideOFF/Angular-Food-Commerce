@@ -3,7 +3,7 @@
     {
       "username": "sh",
       "password": "1234",
-      "email": "shrey@gmail.com",
+      "email": "shreyas@gmail.com",
       "tel": 9999999991,
       "id": "8ce6"
     },
@@ -11,7 +11,7 @@
       "username": "vp",
       "password": "1234",
       "email": "shrey@gmail.com",
-      "tel": 9999999991,
+      "tel": 999999999,
       "id": "85ec"
     },
     {
@@ -34,21 +34,35 @@
       "password": "1234",
       "email": "vansh@gmail.com",
       "tel": "-1212"
+    },
+    {
+      "id": "2b16",
+      "username": "Sudhanshu",
+      "password": "12",
+      "email": "sudh@gmail.com",
+      "tel": "99999999"
     }
   ],
   "cart": [
     {
-      "id": "6a3e",
-      "username": "Shreyas",
-      "item": "Syltherine",
-      "price": 2500,
+      "id": "93a5",
+      "username": "Sudhanshu",
+      "item": "Sofa",
+      "price": 28000,
       "quantity": 1
     },
     {
-      "id": "b188",
-      "username": "Shreyas",
+      "id": "14a2",
+      "username": "Sudhanshu",
       "item": "Syltherine",
-      "price": 2500,
+      "price": 4500,
+      "quantity": 1
+    },
+    {
+      "id": "d675",
+      "username": "Sudhanshu",
+      "item": "Table",
+      "price": 4500,
       "quantity": 1
     }
   ]
