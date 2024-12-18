@@ -8,7 +8,8 @@
         <div class="cart-section w-100">
           <div class="card p-5 w-100">
             <h2>Cart</h2>
-            <hr class="cart-hr" />
+            <span>Total items:{{cart.length}}</span>
+            <hr class="cart" />
             <table class="table table-hover">
               <thead>
                 <tr>
@@ -16,6 +17,7 @@
                   <th>Price</th>
                   <th>Quantity</th>
                   <th>Subtotal</th>
+                  <th>Remove</th>
                 </tr>
               </thead>
               <tbody>
@@ -90,6 +92,7 @@
                   <td>{{item.price}}</td>
                   <td>{{item.quantity}}</td>
                   <td>{{item.price}}</td>
+                  <td><i style="display: flex;" class="fa fa-trash" aria-hidden="true"></i></td>
                 </tr>
               </tbody>
             </table>
