@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CartService } from '../cart.service';
+import { Orders } from '../orders';
 
 
 @Component({
@@ -14,7 +16,9 @@ export class DashboardComponent {
   pwd:string='';
   ema:string='';
   tel:string='';
-  constructor(){
+
+  constructor(private _cs:CartService ){
+
     var uname =localStorage.getItem("uname");
     // var pass =localStorage.getItem("pass");
     // var email =localStorage.getItem("email");
@@ -36,5 +40,10 @@ export class DashboardComponent {
   //     this.email = params['email']
   //   }); 
   // }
+  }
+  addToCart(item:string,price:number){
+    var order=new Orders(this.una, item, price, 1)
+    this._cs.cart.push(order)
+    console.log(this._cs.cart)
   }
 }
