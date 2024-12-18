@@ -45,76 +45,6 @@
   ],
   "cart": [
     {
-      "id": "6a3e",
-      "username": "Shreyas",
-      "item": "Syltherine",
-      "price": 2500,
-      "quantity": 1
-    },
-    {
-      "id": "b188",
-      "username": "Shreyas",
-      "item": "Syltherine",
-      "price": 2500,
-      "quantity": 1
-    },
-    {
-      "id": "df90",
-      "username": "Sudhanshu",
-      "item": "Syltherine",
-      "price": 2500,
-      "quantity": 1
-    },
-    {
-      "id": "97b5",
-      "username": "Sudhanshu",
-      "item": "Syltherine",
-      "price": 2500,
-      "quantity": 1
-    },
-    {
-      "id": "08a2",
-      "username": "Sudhanshu",
-      "item": "Syltherine",
-      "price": 2500,
-      "quantity": 1
-    },
-    {
-      "id": "a5de",
-      "username": "Sudhanshu",
-      "item": "Syltherine",
-      "price": 2500,
-      "quantity": 1
-    },
-    {
-      "id": "018c",
-      "username": "Sudhanshu",
-      "item": "Syltherine",
-      "price": 2500,
-      "quantity": 1
-    },
-    {
-      "id": "28ee",
-      "username": "Sudhanshu",
-      "item": "Syltherine",
-      "price": 2500,
-      "quantity": 1
-    },
-    {
-      "id": "04d8",
-      "username": "Sudhanshu",
-      "item": "Syltherine",
-      "price": 2500,
-      "quantity": 1
-    },
-    {
-      "id": "f942",
-      "username": "Sudhanshu",
-      "item": "Chair",
-      "price": 2500,
-      "quantity": 1
-    },
-    {
       "id": "93a5",
       "username": "Sudhanshu",
       "item": "Sofa",
@@ -125,6 +55,13 @@
       "id": "14a2",
       "username": "Sudhanshu",
       "item": "Syltherine",
+      "price": 4500,
+      "quantity": 1
+    },
+    {
+      "id": "d675",
+      "username": "Sudhanshu",
+      "item": "Table",
       "price": 4500,
       "quantity": 1
     }

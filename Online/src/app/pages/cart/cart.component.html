@@ -17,7 +17,7 @@
                   <th>Price</th>
                   <th>Quantity</th>
                   <th>Subtotal</th>
-                  <th>Remove</th>
+                  
                 </tr>
               </thead>
               <tbody>
@@ -27,10 +27,10 @@
                 </tr> -->
                 <tr *ngFor="let item of cart" class="text-center">
                   <td>{{item.item}}</td>
-                  <td>{{item_price}}</td>
+                  <td>{{item.price}}</td>
                   <td ><button class="rounded-circle px-2 m-1" (click)="decreaseQuantity(item.id)" style="background-color:#e6a400; border:none">-</button>{{item.quantity}} <button (click)="increaseQuantity(item.id)" class="rounded-circle px-2 m-1" style="background-color:#e6a400; border: none;">+</button></td>
                   <td>{{item.price *item.quantity}}</td>
-                  <td><i style="display: flex;" class="fa fa-trash" aria-hidden="true"></i></td>
+                  <td><i  class="fa fa-trash" aria-hidden="true" (click)="removeItem(item.id)" ></i></td>
                 </tr>
               </tbody>
             </table>
