@@ -11,6 +11,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { HeaderComponent } from '../components/header/header.component';
 import { ShopComponent } from './shop/shop.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ShopComponent } from './shop/shop.component';
     // FooterComponent,
     // HeaderComponent
     ProfileComponent,
+    CheckoutComponent,
   ],
   imports: [
     CommonModule,
@@ -38,7 +40,8 @@ import { ShopComponent } from './shop/shop.component';
     RegisterComponent,
     // FooterComponent,
     // HeaderComponent,
-    ProfileComponent
+    ProfileComponent,
+    CheckoutComponent
   ]
 })
 export class PagesModule { }

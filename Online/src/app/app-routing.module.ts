@@ -8,6 +8,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ShopComponent } from './pages/shop/shop.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' }, // Default route
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
   { path: 'shop' , component:ShopComponent},
+  { path: 'checkout', component:CheckoutComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'profile',component: ProfileComponent},
   { path: '**', redirectTo: '/dashboard' }, // Wildcard route for a 404 page

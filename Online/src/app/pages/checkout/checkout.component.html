@@ -1,0 +1,262 @@
+<div>
+    <!-- <div class="container">
+          <div class="header-background"></div>
+          <div class="navbar">
+            <div class="nav-links">
+              <div class="nav-item">Home</div>
+              <div class="nav-item">Shop</div>
+              <div class="nav-item">About</div>
+              <div class="nav-item">Contact</div>
+            </div>
+            <div class="right-icons">
+              <div class="icon cart-icon">
+                <div class="icon-background"></div>
+              </div>
+              <div class="icon search-icon">
+                <div class="icon-border"></div>
+              </div>
+              <div class="icon profile-icon">
+                <div class="icon-border"></div>
+              </div>
+              <div class="icon menu-icon">
+                <div class="icon-background"></div>
+              </div>
+              <div class="brand">
+                <img src="" alt="Logo" class="logo">
+                <div class="brand-name">Furniro</div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+    <div class="banner-container w-100">
+      <img
+        src="./assets/img/checkout.png"
+        alt="Background Image"
+        class="banner-image"
+      />
+      <div class="checkout-title-container">
+        <div class="checkout-title">Checkout</div>
+        <img
+          src="./assets/img/Meubel House_Logos-05.png"
+          alt="Icon"
+          class="checkout-icon"
+        />
+      </div>
+      <div class="breadcrumb">
+        <div class="breadcrumb-home">
+          <a href="../home.html" style="color: black; text-decoration: none"
+            >Home</a
+          >
+        </div>
+        <div class="breadcrumb-current">Checkout</div>
+        <div class="breadcrumb-arrow">
+          <img
+            src="./assets/img/dashicons_arrow-down-alt2.png"
+            alt="Icon"
+            class="arrow-icon"
+          />
+        </div>
+      </div>
+    </div>
+    <form method="get">
+      <div class="checkout-content">
+        <!-- Billing Details Section -->
+        <div class="billing-details">
+          <h1 class="section-title">Billing details</h1>
+
+          <div class="form-group name-fields">
+            <div class="form-field">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first-name" required />
+            </div>
+            <div class="form-field">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last-name" required />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="company-name" class="label"
+              >Company Name (Optional)</label
+            >
+            <input id="company-name" type="text" class="input" />
+          </div>
+
+          <div class="input-group">
+            <label for="street-address" class="label">Street address</label>
+            <input id="street-address" type="text" class="input" required />
+          </div>
+
+          <div class="input-group">
+            <label for="zip-code" class="label">ZIP code</label>
+            <input id="zip-code" type="text" class="input" required />
+          </div>
+
+          <div class="input-group">
+            <label for="city" class="label">Town / City</label>
+            <input id="city" type="text" class="input" required />
+          </div>
+
+          <div class="input-group">
+            <!-- <label for="country" class="label">Country / Region</label>
+              <input id="country" type="text" class="input" value="Sri Lanka"> -->
+            <label for="country" class="label">Country / Region</label>
+            <select id="country" class="input" name="country" required>
+              <!-- Sample of country options -->
+              <option value="India" selected>India</option>
+              <option value="Sri Lanka">Sri Lanka</option>
+              <option value="United States">United States</option>
+              <option value="Canada">Canada</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Australia">Australia</option>
+              <!-- Add more countries as needed -->
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="province" class="label">Province</label>
+            <input
+              id="province"
+              type="text"
+              class="input"
+              placeholder="Western Province"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="phone" class="label">Phone</label>
+            <input
+              id="phone"
+              type="text"
+              class="input"
+              pattern="[\\+]{1}[0-9]{2}-[0-9]{10}"
+              placeholder="+91-1234567890"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="email" class="label">Email address</label>
+            <input
+              id="email"
+              type="email"
+              class="input"
+              placeholder="abc@xyz.com"
+              required
+            />
+          </div>
+
+          <div class="additional-info">
+            <textarea placeholder="Additional information"></textarea>
+          </div>
+        </div>
+
+        <!-- Order Summary Section -->
+        <div class="order-summary">
+          <h2 class="section-title">Order Summary</h2>
+
+          <div class="order-summary">
+            <h2 class="order-summary-title">Product</h2>
+            <h2 class="order-summary-title">Subtotal</h2>
+            <div class="order-item">
+
+            <table>
+                
+                <tbody>
+                <tr *ngFor="let item of cart">
+                    <td><span class="product-name">{{item.item}}</span></td>
+                    <td><span class="product-price">₹{{item.price}}</span></td>
+                   
+                  </tr>
+                  </tbody>
+            </table>
+            </div>
+
+            <div class="order-subtotal">
+              <span class="subtotal-label">Subtotal</span>
+              <span class="subtotal-price">₹{{total}}</span>
+            </div>
+
+            <div class="order-subtotal">
+                <span class="subtotal-label">Tax</span>
+                <span class="subtotal-price">₹{{0.15*total}}</span>
+            </div>
+
+            <div class="order-total">
+              <span class="total-label">Total</span>
+              <span class="total-price">₹{{total * 1.15}}</span>
+            </div>
+
+            <div class="payment-options">
+              <div class="payment-option selected">
+                <input
+                  type="radio"
+                  id="bank-transfer"
+                  name="payment"
+                  checked
+                />
+                <label for="bank-transfer">Direct Bank Transfer</label>
+                <p class="payment-instructions">
+                  Make your payment directly into our bank account. Please use
+                  your Order ID as the payment reference. Your order will not
+                  be shipped until the funds have cleared in our account.
+                </p>
+              </div>
+
+              <div class="payment-option selected">
+                <input type="radio" id="cash-on-delivery" name="payment" />
+                <label for="cash-on-delivery">Cash On Delivery</label>
+              </div>
+            </div>
+
+            <p class="privacy-notice">
+              Your personal data will be used to support your experience
+              throughout this website, to manage access to your account, and
+              for other purposes described in our
+              <a href="#">privacy policy</a>.
+            </p>
+
+            <button class="place-order-button" value="Submit" type="submit">
+              Place order
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- </div> -->
+    <div class="features-container">
+      <div class="feature-item">
+        <img src="./assets/img/Group.png" alt="High Quality" class="feature-icon" />
+        <h3>High Quality</h3>
+        <p>crafted from top materials</p>
+      </div>
+      <div class="feature-item">
+        <img
+          src="./assets/img/guarantee.png"
+          alt="Warranty Protection"
+          class="feature-icon"
+        />
+        <h3>Warranty Protection</h3>
+        <p>Over 2 years</p>
+      </div>
+      <div class="feature-item">
+        <img
+          src="./assets/img/shipping.png"
+          alt="Free Shipping"
+          class="feature-icon"
+        />
+        <h3>Free Shipping</h3>
+        <p>Order over 150 $</p>
+      </div>
+      <div class="feature-item">
+        <img
+          src="./assets/img/customer-support.png"
+          alt="24/7 Support"
+          class="feature-icon"
+        />
+        <h3>24 / 7 Support</h3>
+        <p>Dedicated support</p>
+      </div>
+    </div>
+  </div>
