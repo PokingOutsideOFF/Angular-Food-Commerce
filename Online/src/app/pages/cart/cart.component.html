@@ -12,7 +12,7 @@
             <hr class="cart" />
             <table class="table table-hover">
               <thead>
-                <tr>
+                <tr class="text-center">
                   <th>Product</th>
                   <th>Price</th>
                   <th>Quantity</th>
@@ -22,76 +22,14 @@
               </thead>
               <tbody>
                 <!-- <tr>
-                  <td>
-                    <div class="product-info">
-                      <img
-                        src="./assets/img/cart_img/asgard_sofa.png"
-                        alt="Asgaard sofa"
-                        style="width: 80px; height: auto"
-                      />
-                    </div>
-                  </td>
-                  <td>Rs. 250K</td>
-                  <td>
-                    <input
-                      type="number"
-                      value="1"
-                      min="1"
-                      class="item_quantity"
-                    />
-                  </td>
-                  <td>Rs. 250,000.00</td>
-                  <td>
-                    <button
-                      class="remove-btn"
-                      style="background: none; border: none; cursor: pointer"
-                    >
-                      <img
-                        src="./assets/img/cart_img/dustbin_icon.png"
-                        alt="Remove"
-                        style="width: 20px"
-                      />
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="product-info">
-                      <img
-                        src="./assets/img/cart_img/Outdoor_sofa.png"
-                        alt="Outdoor sofa set"
-                        style="width: 80px; height: auto"
-                      />
-                    </div>
-                  </td>
-                  <td>Rs. 350K</td>
-                  <td>
-                    <input
-                      type="number"
-                      value="1"
-                      min="1"
-                      class="item_quantity"
-                    />
-                  </td>
-                  <td>Rs. 350,000.00</td>
-                  <td>
-                    <button
-                      class="remove-btn"
-                      style="background: none; border: none; cursor: pointer"
-                    >
-                      <img
-                        src="./assets/img/cart_img/dustbin_icon.png"
-                        alt="Remove"
-                        style="width: 20px"
-                      />
-                    </button>
-                  </td>
+                  
+                  
                 </tr> -->
-                <tr *ngFor="let item of cart">
+                <tr *ngFor="let item of cart" class="text-center">
                   <td>{{item.item}}</td>
-                  <td>{{item.price}}</td>
-                  <td>{{item.quantity}}</td>
-                  <td>{{item.price}}</td>
+                  <td>{{item_price}}</td>
+                  <td ><button class="rounded-circle px-2 m-1" (click)="decreaseQuantity(item.id)" style="background-color:#e6a400; border:none">-</button>{{item.quantity}} <button (click)="increaseQuantity(item.id)" class="rounded-circle px-2 m-1" style="background-color:#e6a400; border: none;">+</button></td>
+                  <td>{{item.price *item.quantity}}</td>
                   <td><i style="display: flex;" class="fa fa-trash" aria-hidden="true"></i></td>
                 </tr>
               </tbody>
@@ -107,10 +45,10 @@
               Tax: <span class="total-amount">₹{{0.15*total}}</span>
             </p>
             <p style="font-size: 1.2em; font-weight: bold">
-              Total: <span class="total-amount">₹{{total * 1.15}}</span>
+              Total: <span class="total-amount">₹{{total * 1.15 | number:'1.2-2'}}</span>
             </p>
-            <button class="checkout-btn">
-              <span> Check Out</span>
+            <button class="checkout-btn" href="checkout">
+              <a href="checkout"> Check Out</a>
             </button>
           </div>
         </div>

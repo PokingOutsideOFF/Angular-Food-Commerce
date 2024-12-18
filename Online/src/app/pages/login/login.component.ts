@@ -27,8 +27,11 @@ export class LoginComponent {
 
   constructor(private _http:HttpClient, private router: Router) {
     this._http.get<any[]>(this.url)
-      .subscribe(resp=>this.user = resp)
-    console.log(this.user)
+      .subscribe(resp=>{
+        this.user = resp;
+        console.log(this.user)
+      })
+    
   }
 
   validate() {
