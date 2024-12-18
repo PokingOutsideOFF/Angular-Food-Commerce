@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component,OnInit } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -16,6 +16,8 @@ export class CartComponent implements OnInit {
 
   url = "http://localhost:3000/cart"
 
+ 
+
   constructor(private _http:HttpClient, private _ts:Title){
     this._http.get<any[]>(this.url)
       .subscribe(resp => {
@@ -25,6 +27,10 @@ export class CartComponent implements OnInit {
         this.calculatesubtotal();
       }
       );
+  }
+
+  ngOnInit(): void {
+    this._ts.setTitle('Cart')
   }
   calculateTotal(){
     console.log("Here")
