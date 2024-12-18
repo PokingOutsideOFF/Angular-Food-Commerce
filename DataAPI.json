@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "username": "sh",
+      "password": "1234",
+      "email": "shrey@gmail.com",
+      "tel": 9999999991,
+      "id": "8ce6"
+    },
+    {
+      "username": "vp",
+      "password": "1234",
+      "email": "shrey@gmail.com",
+      "tel": 9999999991,
+      "id": "85ec"
+    },
+    {
+      "username": "ss",
+      "password": "1234",
+      "email": "shrey@gmail.com",
+      "tel": 9999999991,
+      "id": "d35d"
+    },
+    {
+      "id": "f8bf",
+      "username": "Shreyas",
+      "password": "1234",
+      "email": "sh",
+      "tel": "123"
+    },
+    {
+      "id": "010f",
+      "username": "Vansh",
+      "password": "1234",
+      "email": "vansh@gmail.com",
+      "tel": "-1212"
+    }
+  ],
+  "cart": [
+    {
+      "id": "6a3e",
+      "username": "Shreyas",
+      "item": "Syltherine",
+      "price": 2500,
+      "quantity": 1
+    },
+    {
+      "id": "b188",
+      "username": "Shreyas",
+      "item": "Syltherine",
+      "price": 2500,
+      "quantity": 1
+    }
+  ]
+}

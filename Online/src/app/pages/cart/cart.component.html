@@ -3,66 +3,23 @@
       <img src="../assets/img/cart_img/top.png" alt="top" />
     </div>
     <div class="container">
-      <!-- <header>
-            <a href="Home.html" class="navbar-icon">
-                <img src="./assets/img/cart_img/logo.png" alt="Furniro" class="head-icon">
-            </a>
-            <nav>
-                <ul class="sub-head">
-                    <li style="margin-left: 3em;">
-                        <a href="Home.html">Home</a></li>
-                    <li style="margin-left: 3em;">
-                        <a href="Shop.html">Shop</a></li>
-                    <li style="margin-left: 3em;">
-                        <a href="About.html">About</a></li>
-                    <li style="margin-left: 3em;
-                    margin-right: 8em;">
-                    <a href="Contact.html">Contact</a></li>
-
-                    <li class="icon">
-                        <a href="#">
-                        <img class="nav-icon"
-                        src="./assets/img/cart_img/profile.png" alt="profile"/>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                        <img class="nav-icon"
-                        src="./assets/img/cart_img/search icon.png" alt="search"/>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                        <img class="nav-icon"
-                        src="./assets/img/cart_img/hear icon.png" alt="heart"/>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                        <img class="nav-icon"
-                        src="./assets/img/cart_img/cart icon.png" alt="cart"/>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header> -->
-
+  
       <section class="cart-section-outer">
-        <div class="cart-section">
-          <div class="cart-details">
+        <div class="cart-section w-100">
+          <div class="card p-5 w-100">
             <h2>Cart</h2>
             <hr class="cart-hr" />
-            <table class="cart-table">
+            <table class="table table-hover">
               <thead>
                 <tr>
-                  <th>PRODUCT</th>
-                  <th>PRICE</th>
-                  <th>QUANTITY</th>
-                  <th>SUBTOTAL</th>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Subtotal</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <!-- <tr>
                   <td>
                     <div class="product-info">
                       <img
@@ -127,6 +84,12 @@
                       />
                     </button>
                   </td>
+                </tr> -->
+                <tr *ngFor="let item of cart">
+                  <td>{{item.item}}</td>
+                  <td>{{item.price}}</td>
+                  <td>{{item.quantity}}</td>
+                  <td>{{item.price}}</td>
                 </tr>
               </tbody>
             </table>
@@ -135,18 +98,16 @@
           <div class="cart-total">
             <h3>Cart Totals</h3>
             <p class="Subtotal">
-              Subtotal: <span class="total-amount">Rs. 600,000.00</span>
+              Subtotal: <span class="total-amount">₹{{total}}</span>
+            </p>
+            <p class="Subtotal">
+              Tax: <span class="total-amount">₹{{0.15*total}}</span>
             </p>
             <p style="font-size: 1.2em; font-weight: bold">
-              Total: <span class="total-amount">Rs. 600,000.00</span>
+              Total: <span class="total-amount">₹{{total * 1.15}}</span>
             </p>
             <button class="checkout-btn">
-              <a
-                href="checkout.html"
-                style="text-decoration: none; color: white"
-              >
-                Check Out</a
-              >
+              <span> Check Out</span>
             </button>
           </div>
         </div>
