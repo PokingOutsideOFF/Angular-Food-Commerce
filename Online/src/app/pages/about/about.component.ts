@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
   standalone: false
 
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
+  constructor(private _ts:Title){}
 
+  ngOnInit(): void {
+    this._ts.setTitle('About Us')
+  }
 }

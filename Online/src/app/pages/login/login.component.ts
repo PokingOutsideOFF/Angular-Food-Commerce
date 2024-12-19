@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
-// import { LoginServiceService } from '../login-service.service';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   standalone: false
 
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   path = '../assets/sofa.webp'
   title = "sofa";
   
@@ -25,13 +25,17 @@ export class LoginComponent {
   u: any = {}
   valid: string = ""
 
-  constructor(private _http:HttpClient, private router: Router) {
+  constructor(private _http:HttpClient, private router: Router, private _ts: Title) {
     this._http.get<any[]>(this.url)
       .subscribe(resp=>{
         this.user = resp;
         console.log(this.user)
       })
     
+  }
+
+  ngOnInit(): void {
+    this._ts.setTitle('Login')
   }
 
   validate() {

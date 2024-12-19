@@ -73,5 +73,6 @@ nav ul li {
     
 }
 .hov:hover:after,.home:hover:after {
-    width: 78%
+    width: 78%;
+    transition: 0.4s;
 }

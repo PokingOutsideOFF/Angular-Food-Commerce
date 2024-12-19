@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-profile',
@@ -6,12 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.component.css'],
   standalone: false
 })
-export class ProfileComponent {
+export class ProfileComponent implements OnInit {
   una:string='';
   pwd:string='';
   ema:string='';
   tel:string='';
-  constructor(){
+  constructor(private _ts:Title){
     var uname =localStorage.getItem("uname");
     var pass =localStorage.getItem("pass");
     var email =localStorage.getItem("email");
@@ -22,4 +23,7 @@ export class ProfileComponent {
     this.tel=`${tel}`;
   }
 
+  ngOnInit(): void {
+    this._ts.setTitle('Profile')
+  }
 }

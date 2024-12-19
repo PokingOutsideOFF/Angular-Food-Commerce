@@ -17,23 +17,24 @@
                   <th>Price</th>
                   <th>Quantity</th>
                   <th>Subtotal</th>
-                  
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
-                <!-- <tr>
-                  
-                  
-                </tr> -->
+                
                 <tr *ngFor="let item of cart" class="text-center">
                   <td>{{item.item}}</td>
                   <td>{{item.price}}</td>
-                  <td ><button class="rounded-circle px-2 m-1" (click)="decreaseQuantity(item.id)" style="background-color:#e6a400; border:none">-</button>{{item.quantity}} <button (click)="increaseQuantity(item.id)" class="rounded-circle px-2 m-1" style="background-color:#e6a400; border: none;">+</button></td>
+                  <td ><i class="fa-solid fa-circle-minus" (click)="decreaseQuantity(item.id)" style="color:#e6a400; border:none; cursor: pointer;"></i>{{item.quantity}} <i class="fa-solid fa-circle-plus" (click)="increaseQuantity(item.id)" style="color:#e6a400; border:none;cursor: pointer;"></i></td>
                   <td>{{item.price *item.quantity}}</td>
-                  <td><i  class="fa fa-trash" aria-hidden="true" (click)="removeItem(item.id)" ></i></td>
+                  <td><i class="fa-solid fa-trash" style="cursor: pointer;" (click)="removeItem(item.id)"></i></td>
                 </tr>
               </tbody>
+              
             </table>
+            <div *ngIf="cart.length == 0">
+              <p style="text-align: center;">Cart is empty</p>
+            </div>
           </div>
 
           <div class="cart-total">
