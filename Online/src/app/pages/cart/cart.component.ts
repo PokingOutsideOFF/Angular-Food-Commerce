@@ -32,6 +32,8 @@ export class CartComponent implements OnInit {
   }
   calculateTotal(){
     console.log("Here")
+    // console.log(this.total)
+    this.total = 0
     for (let i of this.cart) {
       this.total += i.price * i.quantity;
     }

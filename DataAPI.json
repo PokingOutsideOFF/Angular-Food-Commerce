@@ -24,7 +24,7 @@
     {
       "id": "f8bf",
       "username": "Shreyas",
-      "password": "1234",
+      "password": "21234",
       "email": "sh",
       "tel": "123"
     },
@@ -41,19 +41,40 @@
       "password": "12",
       "email": "sudh@gmail.com",
       "tel": "99999999"
+    },
+    {
+      "id": "fbca",
+      "username": "Shreyas",
+      "password": "123456",
+      "email": "shrey@gmail.com",
+      "tel": "9321212345"
+    },
+    {
+      "id": "75f1",
+      "username": "As",
+      "password": "",
+      "email": "as@g.com",
+      "tel": "123456781"
+    },
+    {
+      "id": "3e70",
+      "username": "Polia",
+      "password": "",
+      "email": "p@g.com",
+      "tel": "1234567891"
+    },
+    {
+      "id": "8703",
+      "username": "sudh",
+      "password": "123456",
+      "email": "s@g.com",
+      "tel": "1234567891"
     }
   ],
   "cart": [
     {
-      "id": "14a2",
-      "username": "Sudhanshu",
-      "item": "Syltherine",
-      "price": 4500,
-      "quantity": 1
-    },
-    {
-      "id": "d675",
-      "username": "Sudhanshu",
+      "id": "14f6",
+      "username": "Vansh",
       "item": "Table",
       "price": 4500,
       "quantity": 1

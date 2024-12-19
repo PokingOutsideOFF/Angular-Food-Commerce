@@ -12,7 +12,7 @@
                             <label for="floatingInput">Username</label>
                             <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
                                 <div *ngIf="f['username'].errors['required']">Username is required</div>
-                                <div *ngIf="f['username'].errors['username']">Username must be atleast 2 characters long</div>
+                                <div *ngIf="f['username'].errors['minlength']">Username must be atleast 2 characters long</div>
                             </div>
                         </div>
                       
@@ -33,11 +33,11 @@
                             <label for="floatingInput">Contact No.</label>
                             <div *ngIf="submitted && f['tel'].errors" class="invalid-feedback">
                                 <div *ngIf="f['tel'].errors['required']">Contact No. is required</div>
-                                <div *ngIf="f['tel'].errors['pattern']">Contact No. should be 10 digits</div>
+                                <div *ngIf="f['tel'].errors['minlength'] || f['tel'].errors['maxlength']">Contact No. should be 10 digits</div>
                             </div>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="floatingInputPassword" [ngClass]="{'is-invalid':submitted && f['pwd']}" formControlName="pwd" [(ngModel)]="pwd" placeholder="">
+                            <input type="password" class="form-control" id="floatingInputPassword" [ngClass]="{'is-invalid':submitted && f['pwd'].errors}" formControlName="pwd" [(ngModel)]="pwd" placeholder="">
                             <label for="floatingInput">Password</label>
                             <div *ngIf="submitted && f['pwd'].errors" class="invalid-feedback">
                                 <div *ngIf="f['pwd'].errors['required']">Password is required</div>
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="floatingInputConfirmPassword" [ngClass]="{'is-invalid':submitted && f['confirmpwd']}" formControlName="confirmpwd"   [(ngModel)]="confirm_pwd" placeholder="">
+                            <input type="password" class="form-control" id="floatingInputConfirmPassword" [ngClass]="{'is-invalid':submitted && f['confirmpwd'].errors}" formControlName="confirmpwd"  [(ngModel)]="confirm_pwd" placeholder="">
                             <label for="floatingInput">Confirm Password</label>
                             <div *ngIf="submitted && f['confirmpwd'].errors" class="invalid-feedback">
                                 <div *ngIf="f['confirmpwd'].errors['required']">Password is required</div>
