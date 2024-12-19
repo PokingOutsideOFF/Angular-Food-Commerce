@@ -24,6 +24,7 @@ export class CartComponent implements OnInit {
         console.log(this.cart);
         this.calculateTotal();
         this.calculatesubtotal();
+      
       });
   }
 
